@@ -1,6 +1,5 @@
 #! /usr/bin/env node
 
-const { program } = require("commander");
 const fs = require("fs");
 const orm = require("./orm");
 const parse = require("./parse");
@@ -29,10 +28,3 @@ model User {
 
   console.log(result);
 }
-
-program
-  .command("generate <name>")
-  .description("Generate a new migration")
-  .action(generateMigration);
-
-program.parse(process.argv);
